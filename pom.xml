@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>za.co.bbd</groupId>
     <artifactId>jportal2</artifactId>
-    <version>1.2.0-SNAPSHOT</version>
+    <version>1.5.7-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
         <slf4j.version>1.7.25</slf4j.version>
@@ -18,8 +17,11 @@
     <description>Database, Module and Application code generators for varying platforms, vendors and languages.
     </description>
     <scm>
-        <url>https://github.com/SI-Gen/jportal2</url>
-    </scm>
+        <url>https://github.com/dieterrosch/jportal2</url>
+      <connection>scm:git:${project.scm.url}</connection>
+    <developerConnection>scm:git:${project.scm.url}</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -329,8 +331,7 @@
                         <configuration>
                             <transformers>
                                 <!-- add Main-Class to manifest file -->
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>bbd.jportal2.Main</mainClass>
                                 </transformer>
                             </transformers>
@@ -338,24 +339,24 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.owasp</groupId>
-                <artifactId>dependency-check-maven</artifactId>
-                <version>6.0.2</version>
-                <configuration>
-                    <failBuildOnCVSS>8</failBuildOnCVSS>
-                    <skipProvidedScope>true</skipProvidedScope>
-                    <skipRuntimeScope>true</skipRuntimeScope>
-                    <skipTestScope>true</skipTestScope>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.owasp</groupId>-->
+<!--                <artifactId>dependency-check-maven</artifactId>-->
+<!--                <version>6.0.2</version>-->
+<!--                <configuration>-->
+<!--                    <failBuildOnCVSS>8</failBuildOnCVSS>-->
+<!--                    <skipProvidedScope>true</skipProvidedScope>-->
+<!--                    <skipRuntimeScope>true</skipRuntimeScope>-->
+<!--                    <skipTestScope>true</skipTestScope>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
