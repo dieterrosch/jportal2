@@ -1,0 +1,750 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Portal2 is the newest version of the JPortal SI-file based generator.">
+      
+      
+      
+      
+      <link rel="icon" href="assest/metisiconsmall.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>JPortal2</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ef5552">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="reds">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#jportal2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="JPortal2" class="md-header__button md-logo" aria-label="JPortal2" data-md-component="logo">
+      
+  <img src="assest/metisiconsmall.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JPortal2
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              JPortal2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/SI-Gen/jportal2/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m2 11 2.05.1a7.96 7.96 0 0 1 3.2-5.54L6.13 3.84c-.27-.48-.13-1.09.37-1.37.5-.27 1.09-.11 1.37.37l.93 1.82a8.102 8.102 0 0 1 6.4 0l.93-1.82c.28-.48.87-.64 1.37-.37.5.28.64.89.37 1.37l-1.12 1.72a7.96 7.96 0 0 1 3.2 5.54L22 11a1 1 0 0 1 1 1 1 1 0 0 1-1 1l-2.05-.1a7.96 7.96 0 0 1-3.2 5.54l1.12 1.72c.27.48.13 1.09-.37 1.37-.5.27-1.09.11-1.37-.37l-.93-1.82a8.102 8.102 0 0 1-6.4 0l-.93 1.82c-.28.48-.87.64-1.37.37-.5-.28-.64-.89-.37-1.37l1.12-1.72a7.96 7.96 0 0 1-3.2-5.54L2 13a1 1 0 0 1-1-1 1 1 0 0 1 1-1m7.07.35c.13-.61.46-1.15.93-1.56L8.34 7.25a5.993 5.993 0 0 0-2.29 3.95l3.02.15M12 9c.32 0 .62.05.9.14l1.38-2.69C13.58 6.16 12.81 6 12 6c-.81 0-1.58.16-2.28.45l1.38 2.69c.28-.09.58-.14.9-.14m2.93 2.35 3.02-.15a5.993 5.993 0 0 0-2.29-3.95L14 9.79c.47.41.8.95.93 1.56m0 1.3c-.13.61-.46 1.15-.93 1.56l1.66 2.54a5.993 5.993 0 0 0 2.29-3.95l-3.02-.15M12 15c-.32 0-.62-.05-.91-.14l-1.37 2.69c.7.29 1.47.45 2.28.45.81 0 1.58-.16 2.28-.45l-1.37-2.69c-.29.09-.59.14-.91.14m-2.93-2.35-3.02.15c.22 1.6 1.06 3.01 2.29 3.95L10 14.21c-.47-.41-.8-.95-.93-1.56z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SI-Gen/jportal2
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="JPortal2" class="md-nav__button md-logo" aria-label="JPortal2" data-md-component="logo">
+      
+  <img src="assest/metisiconsmall.png" alt="logo">
+
+    </a>
+    JPortal2
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/SI-Gen/jportal2/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m2 11 2.05.1a7.96 7.96 0 0 1 3.2-5.54L6.13 3.84c-.27-.48-.13-1.09.37-1.37.5-.27 1.09-.11 1.37.37l.93 1.82a8.102 8.102 0 0 1 6.4 0l.93-1.82c.28-.48.87-.64 1.37-.37.5.28.64.89.37 1.37l-1.12 1.72a7.96 7.96 0 0 1 3.2 5.54L22 11a1 1 0 0 1 1 1 1 1 0 0 1-1 1l-2.05-.1a7.96 7.96 0 0 1-3.2 5.54l1.12 1.72c.27.48.13 1.09-.37 1.37-.5.27-1.09.11-1.37-.37l-.93-1.82a8.102 8.102 0 0 1-6.4 0l-.93 1.82c-.28.48-.87.64-1.37.37-.5-.28-.64-.89-.37-1.37l1.12-1.72a7.96 7.96 0 0 1-3.2-5.54L2 13a1 1 0 0 1-1-1 1 1 0 0 1 1-1m7.07.35c.13-.61.46-1.15.93-1.56L8.34 7.25a5.993 5.993 0 0 0-2.29 3.95l3.02.15M12 9c.32 0 .62.05.9.14l1.38-2.69C13.58 6.16 12.81 6 12 6c-.81 0-1.58.16-2.28.45l1.38 2.69c.28-.09.58-.14.9-.14m2.93 2.35 3.02-.15a5.993 5.993 0 0 0-2.29-3.95L14 9.79c.47.41.8.95.93 1.56m0 1.3c-.13.61-.46 1.15-.93 1.56l1.66 2.54a5.993 5.993 0 0 0 2.29-3.95l-3.02-.15M12 15c-.32 0-.62-.05-.91-.14l-1.37 2.69c.7.29 1.47.45 2.28.45.81 0 1.58-.16 2.28-.45l-1.37-2.69c-.29.09-.59.14-.91.14m-2.93-2.35-3.02.15c.22 1.6 1.06 3.01 2.29 3.95L10 14.21c-.47-.41-.8-.95-.93-1.56z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SI-Gen/jportal2
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          JPortal2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        JPortal2
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-jportal2" class="md-nav__link">
+    What is JPortal2?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    History
+  </a>
+  
+    <nav class="md-nav" aria-label="History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jportal" class="md-nav__link">
+    JPortal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jportal2_1" class="md-nav__link">
+    JPortal2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#original-code" class="md-nav__link">
+    Original Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
+  </a>
+  
+    <nav class="md-nav" aria-label="Quickstart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freemarker" class="md-nav__link">
+    Freemarker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-literals" class="md-nav__link">
+    Using Literals
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-jportal2" class="md-nav__link">
+    What is JPortal2?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    History
+  </a>
+  
+    <nav class="md-nav" aria-label="History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jportal" class="md-nav__link">
+    JPortal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jportal2_1" class="md-nav__link">
+    JPortal2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#original-code" class="md-nav__link">
+    Original Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
+  </a>
+  
+    <nav class="md-nav" aria-label="Quickstart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freemarker" class="md-nav__link">
+    Freemarker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-literals" class="md-nav__link">
+    Using Literals
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/SI-Gen/jportal2/edit/master/docs/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="jportal2">JPortal2<a class="headerlink" href="#jportal2" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/SI-Gen/jportal2/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/SI-Gen/jportal2.svg" /></a>
+<a href="https://si-gen.github.io/jportal2/"><img alt="Documentation Site" src="https://img.shields.io/badge/DOCS_SITE-YES-GREEN.svg" /></a>
+<a href="https://dieterrosch.visualstudio.com/_apis/public/build/definitions/62fc2ca3-38b4-432f-8341-af383b7ba8e4/3/badge"><img src="https://dieterrosch.visualstudio.com/_apis/public/build/definitions/62fc2ca3-38b4-432f-8341-af383b7ba8e4/3/badge"/></a>
+<a href="https://github.com/SI-Gen/jportal2/network/"><img alt="GitHub forks" src="https://img.shields.io/github/forks/SI-Gen/jportal2.svg?style=social&amp;label=Fork&amp;maxAge=2592000" /></a></p>
+<p>JPortal2 is the newest version of the JPortal SI-file based generator.</p>
+<h2 id="what-is-jportal2">What is JPortal2?<a class="headerlink" href="#what-is-jportal2" title="Permanent link">&para;</a></h2>
+<p>Simply put, JPortal2 (and JPortal before it) is a data-definition first code generator.<br />
+To use it, you define database tables using a small, easy-to-understand Domain-Specific Language (DSL). You define the queries you want to expose for the table. Standard CRUD queries like SELECT, INSERT, UPDATE, DELETE and MERGE can be created for you. More complex queries can easily be defined using standard SQL. Once you have defined your tables, you run the JPortal2 generator, and specify the code you want generated. JPortal2 can generate:
+    * DDL for all the popular RDBMS systems (Postgres, MySQL, Oracle, SQLServer, DB/2 and others)
+    * DAL (Data Access Layers) for most languages (C/C++, Java, C#, Python and others)
+    * Code stubs that can be used in other generators to create Client/Server and other Applications
+    * Anything else you want to generate off your database structure</p>
+<p>JPortal2 has a number of built-in code generators written in Java, but also has built-in Freemarker support to allow you to easily add you own generators.</p>
+<h2 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h2>
+<h3 id="jportal">JPortal<a class="headerlink" href="#jportal" title="Permanent link">&para;</a></h3>
+<p>JPortal was originally developed in the early 1990's by Vincent Risi (https://github.com/VincentRisi) as a standardised way to generate a Data Access Layer (DAL) for multiple databases and target languages. SI Files allow the definition of a SQL table with columns, as well as SQL Queries to be run against the table. It then allows the generation of a DAL in a number of languages. Being developed in the 90's, the first languages that were supported, were Java, C++, C and Visual Basic. Original database support was for Oracle.</p>
+<p>Over the years the tool has grown into a suite of tools to include generators DAL's, RPC client and server generators and for a number of languages including C# and Python, and database support for Oracle, SQL Server, MySQL, PostgreSQL, DB2 and SQLite.</p>
+<h3 id="jportal2_1">JPortal2<a class="headerlink" href="#jportal2_1" title="Permanent link">&para;</a></h3>
+<p>The original JPortal grew organically, and while over the years the capabilities have expanded, lots of it was not envisioned originally. As a result, some of the code has become difficult to maintain. JPortal2 is an attempt to clean up the code bit-by-bit, and also start adding unittests and other features that are required in modern libraries.</p>
+<h3 id="original-code">Original Code<a class="headerlink" href="#original-code" title="Permanent link">&para;</a></h3>
+<p>The original JPortal code can be found at https://github.com/VincentRisi. An updated version with some bug-fixes can be found at https://github.com/dieterrosch. However, this repo (https://github.com/SI-Gen) is the only actively maintained repository. </p>
+<h2 id="quickstart">Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h2>
+<h3 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h3>
+<p>To use JPortal2 in your Maven based Java project, simply add the following to your POM:
+properties:</p>
+<pre><code>&lt;properties&gt;    
+    &lt;jportal2.version&gt;1.3.0&lt;/jportal2.version&gt;
+    &lt;jportal2maven.version&gt;1.2.0&lt;/jportal2maven.version&gt;
+&lt;/properties&gt;
+</code></pre>
+<p>dependencies:</p>
+<pre><code>        &lt;dependency&gt;
+            &lt;groupId&gt;za.co.bbd&lt;/groupId&gt;
+            &lt;artifactId&gt;jportal2&lt;/artifactId&gt;
+            &lt;version&gt;1.3.0&lt;/version&gt;
+            &lt;scope&gt;compile&lt;/scope&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<p>and plugins:</p>
+<pre><code>            &lt;plugin&gt;
+            &lt;groupId&gt;za.co.bbd&lt;/groupId&gt;
+            &lt;artifactId&gt;jportal2-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;${jportal2maven.version}&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;sourcePath&gt;${basedir}/src/main/sql/&lt;/sourcePath&gt;
+                &lt;generators&gt;
+                    &lt;generator&gt;JavaJCCode:${basedir}/target/generated-sources/java/com/example/db&lt;/generator&gt;
+                    &lt;generator&gt;PostgresDDL:${basedir}/target/generated-sources/scripts/sql&lt;/generator&gt;
+                &lt;/generators&gt;
+                &lt;compilerFlags&gt;
+                    &lt;compilerFlag&gt;utilizeEnums&lt;/compilerFlag&gt;
+                &lt;/compilerFlags&gt;
+&lt;!--                    &lt;additionalArguments&gt;&amp;#45;&amp;#45;template-generator JdbiSqlObjects:${basedir}/target/generated-sources/java/&lt;/additionalArguments&gt;--&gt;
+            &lt;/configuration&gt;
+            &lt;dependencies&gt;
+                &lt;dependency&gt;
+                    &lt;groupId&gt;za.co.bbd&lt;/groupId&gt;
+                    &lt;artifactId&gt;jportal2&lt;/artifactId&gt;
+                    &lt;version&gt;${jportal2.version}&lt;/version&gt;
+                &lt;/dependency&gt;
+            &lt;/dependencies&gt;
+            &lt;executions&gt;
+               &lt;execution&gt;
+                 &lt;phase&gt;generate-sources&lt;/phase&gt;
+                     &lt;goals&gt;
+                        &lt;goal&gt;jportal&lt;/goal&gt;
+                    &lt;/goals&gt;
+            &lt;/execution&gt;
+            &lt;/executions&gt;
+        &lt;/plugin&gt;
+
+</code></pre>
+<p>JPortal2 is the actual Data Access Layer (DAL) generator. jportal2-maven-plugin is a plugin for maven that will run the generator at build time.</p>
+<p>Create a file called todolist.si in the ${basedir}/src/main/sql/ directory (this is defined above in sourcePath tag)</p>
+<p>todolist.si</p>
+<pre><code class="language-sql">DATABASE ExampleDatabase
+PACKAGE com.example.db
+SERVER ExampleServer
+SCHEMA ToDoList_App
+
+TABLE ToDoList
+   ID               SEQUENCE
+   ListName         CHAR(255)
+   ListType         SHORT (Private=1, Public=2)
+   Description      CHAR
+   LastUpdated      TIMESTAMP
+
+KEY PKEY PRIMARY
+    ID
+
+//Simple CRUD queries are available out of the box with JPortal2
+PROC Insert Returning
+PROC Update
+PROC SelectOne
+PROC DeleteOne
+
+//More complex custom queries can be defined using standard SQL
+PROC SelectListNameAndListTypeAsString
+INPUT
+    ID          =
+OUTPUT
+    ListName    =
+    ListType    CHAR
+SQLCODE
+SELECT
+    ListName,
+    CASE
+        WHEN ListType = 1 THEN 'Private'
+        WHEN ListType = 2 THEN 'Public'
+END
+FROM
+    TodoList
+WHERE
+    ID = :ID
+ENDCODE
+
+//Dynamic queries can be done with the ampersand below
+//REMEMBER!!! Dynamic SQL is open to SQL injection! So use with care and make sure to sanitize inputs!
+//Dynamic SQL is a last resort escape hatch, not the first tool to reach for!!
+//In the DAL class created for the below query, a property called MyDynamicWhereClause will be created
+//This will allow you to pass through the remainder of the where clause as a string.
+PROC SelectWithDynamicQuery
+INPUT
+    ListName    =
+OUTPUT
+   ID               SEQUENCE
+   ListName         CHAR(255)
+   ListType         SHORT (Private=1, Public=2)
+   Description      CHAR
+   LastUpdated      TIMESTAMP
+SQLCODE
+SELECT
+   ID
+   ,ListName
+   ,ListType
+   ,Description
+   ,LastUpdated
+FROM
+    ToDoList
+WHERE
+    ListName = :ListName
+    AND &amp;MyDynamicWhereClause
+ENDCODE
+
+</code></pre>
+<p>Now create a file called todo_items.si in the same directory (${basedir}/src/main/sql/)
+todo_items.si</p>
+<pre><code class="language-sql">DATABASE ExampleDatabase
+PACKAGE com.example.db
+SERVER ExampleServer
+SCHEMA ToDoList_App
+
+TABLE ToDo_Item
+   ID               SEQUENCE
+   TodoList_ID      INT     //This is a foreign key to the ToDoList table
+   ItemName         CHAR(255)
+   ItemDescription  CLOB
+   LastUpdated      TIMESTAMP
+
+//This define ID as the Primary Key
+KEY PKEY PRIMARY
+    ID
+
+PROC Insert Returning
+PROC Update
+PROC SelectOne
+PROC DeleteOne
+
+//The SelectBy function automatically creates
+//a SELECT query using the given fields as the
+//WHERE clause
+PROC SelectBy TodoList_ID
+OUTPUT
+    ID                  =
+    ItemName            =
+    ItemDescription     =
+    LastUpdated         =
+
+
+
+</code></pre>
+<p>Now compile your maven project. If all went well, you should see 2 files inside
+the directory ${basedir}/target/generated-sources/java/com/example/db.</p>
+<h3 id="freemarker">Freemarker<a class="headerlink" href="#freemarker" title="Permanent link">&para;</a></h3>
+<p>To use a Freemarker Template. Create a folder anywhere: \$HOME/templates/Example
+Inside that folder create the freemarker template file: ExampleDB.py.ftl</p>
+<p>JPortal2 supports freemarker file name substitution. For example ExampleDB${database.tables[0].name}.py.ftl will generate a ExampleDB{tablename}.py file for all the SI files you gen for. </p>
+<p>Inside your template file:</p>
+<pre><code>&lt;#list database.tables as table&gt;
+table name: ${table.name}:
+    table Fields:
+    &lt;#list table.fields as field&gt;${field.name}
+    &lt;/#list&gt;
+&lt;/#list&gt;
+</code></pre>
+<p>JPortal2 takes 2 arguments to run freemarker. The template location where all the templates folders are, and what templates you want to run.</p>
+<p>Run jportal with the argument:</p>
+<pre><code>--template-location $HOME/templates/
+--template-generator ExampleDB:$HOME/output
+</code></pre>
+<p>When JPortal2 is done. You will have the generated files in the output directory and it will look like this:</p>
+<pre><code class="language-python">table name: ExampleTable
+    table fields:
+    id
+    name
+    surname
+</code></pre>
+<h2 id="using-literals">Using Literals<a class="headerlink" href="#using-literals" title="Permanent link">&para;</a></h2>
+<p>Occasionally you will want to use a word that is a reserved word, as the name of a table or a column. For example, consider the following SI file:</p>
+<p>todolist.si</p>
+<pre><code class="language-sql">DATABASE ExampleDatabase
+PACKAGE com.example.db
+SERVER ExampleServer
+SCHEMA ToDoList_App
+
+TABLE ToDoList
+   ID               SEQUENCE
+   ListName         CHAR(255)
+   ListType         SHORT (Private=1, Public=2)
+   L'Desc'          CHAR   //DESC is a reserved keyword!
+   LastUpdated      TIMESTAMP
+
+KEY PKEY PRIMARY
+    ID
+
+//Simple CRUD queries are available out of the box with JPortal2
+PROC Insert Returning
+PROC Update
+PROC SelectOne
+PROC DeleteOne
+</code></pre>
+<p>Notice that the Description column is named 'Desc', which is a reserved word (both in JPortal, as well as in SQL). This will cause a JPortal compilation issue. To work around this, we turn the column name into a <em>literal</em> by writing it as L'Desc'. This will allow the SI file to compile.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/ramitsurana" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/ramitsurana" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://linkedin.com/in/ramitsurana" target="_blank" rel="noopener" title="linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["tabs", "instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+    
+  </body>
+</html>
