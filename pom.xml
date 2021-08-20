@@ -18,7 +18,12 @@
     <description>Database, Module and Application code generators for varying platforms, vendors and languages.
     </description>
     <scm>
-        <url>https://github.com/SI-Gen/jportal2</url>
+<!--        <url>https://github.com/SI-Gen/jportal2</url>-->
+        <connection>scm:git:${project.scm.url}</connection>
+        <developerConnection>scm:git:${project.scm.url}</developerConnection>
+        <!--        <url>https://github.com/SI-Gen/jportal2</url>-->
+        <url>https://github.com/dieterrosch/jportal2</url>
+<!--        <tag>1.5.17</tag>-->
     </scm>
     <licenses>
         <license>
