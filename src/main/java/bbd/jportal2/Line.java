@@ -23,6 +23,7 @@ public class Line implements Serializable
 {
   private static final long serialVersionUID = 1L;
   public String line;
+  public String placeHolder = "";
 
   public boolean isVar() {
     return isVar;
@@ -58,8 +59,14 @@ public class Line implements Serializable
     return line;
   }
 
-    public String toString() {
+  public String getUnformattedLine()
+  {
+    return line;
+  }
+
+  public String toString() {
     return getlineval();
   }
+
 }
 
